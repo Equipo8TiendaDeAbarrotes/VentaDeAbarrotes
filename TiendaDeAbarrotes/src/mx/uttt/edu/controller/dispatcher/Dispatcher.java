@@ -11,4 +11,26 @@ package mx.uttt.edu.controller.dispatcher;
  */
 public class Dispatcher {
     
+    public Dispatcher()
+    {
+        
+    }
+    
+    public void dispatch(String request)
+    {
+        if (request.equalsIgnoreCase("")) {
+            
+        }else if(request.equalsIgnoreCase(""))
+        {
+        
+        }else 
+        {
+        
+        }
+ 
+    }
+    
+    
+    
+    
 }
