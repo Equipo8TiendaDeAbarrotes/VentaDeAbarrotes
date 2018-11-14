@@ -5,6 +5,10 @@
  */
 package Ejecutor;
 
+import mx.uttt.edu.front.controller.front.FrontController;
+
+
+
 /**
  *
  * @author moy-c
@@ -14,6 +18,9 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
     /**
      * Creates new form FrontControllerDemoMenu
      */
+    FrontController frm=new FrontController();
+   
+    
     public FrontControllerDemoMenu() {
         initComponents();
     }
@@ -70,6 +77,11 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
         btnAgregarProducto.setText("Agregar Producto");
         btnAgregarProducto.setAutoscrolls(true);
         btnAgregarProducto.setDefaultCapable(false);
+        btnAgregarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarProductoActionPerformed(evt);
+            }
+        });
 
         btnEliminarProducto.setBackground(new java.awt.Color(255, 102, 0));
         btnEliminarProducto.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
@@ -150,6 +162,10 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAgregarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarProductoActionPerformed
 
     /**
      * @param args the command line arguments

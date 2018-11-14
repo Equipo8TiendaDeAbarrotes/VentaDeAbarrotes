@@ -145,6 +145,9 @@
             <Property name="autoscrolls" type="boolean" value="true"/>
             <Property name="defaultCapable" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarProductoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnEliminarProducto">
           <Properties>
