@@ -258,32 +258,32 @@ DefaultTableModel modelo;
             case 0:
                 txtPrecio.setText("");
                this.lblImagen.setIcon(new ImageIcon
-                                ("C:\\Users\\karlo\\OneDrive\\Documentos\\4to CUATRIMESTRE\\DesarrolloAplicacionesll\\GitHub(TiendaDeAbarrotes)\\VentaDeAbarrotes\\TiendaDeAbarrotes\\src\\Imagenes\\blanco.jpg"));
+                                ("src\\Imagenes\\blanco.jpg"));
                 break;
             case 1:
                 txtPrecio.setText("13");
                 this.lblImagen.setIcon(new ImageIcon
-                                ("C:\\Users\\karlo\\OneDrive\\Documentos\\4to CUATRIMESTRE\\DesarrolloAplicacionesll\\GitHub(TiendaDeAbarrotes)\\VentaDeAbarrotes\\TiendaDeAbarrotes\\src\\Imagenes\\frijoles.jpg"));
+                                ("src\\Imagenes\\frijoles.jpg"));
                 break;
             case 2:
                txtPrecio.setText("23");
                 this.lblImagen.setIcon(new ImageIcon
-        ("C:\\Users\\karlo\\OneDrive\\Documentos\\4to CUATRIMESTRE\\DesarrolloAplicacionesll\\GitHub(TiendaDeAbarrotes)\\VentaDeAbarrotes\\TiendaDeAbarrotes\\src\\Imagenes\\salchichas.jpg"));
+        ("src\\Imagenes\\salchichas.jpg"));
                 break;
             case 3:
                   txtPrecio.setText("32");
                 this.lblImagen.setIcon(new ImageIcon
-        ("C:\\Users\\karlo\\OneDrive\\Documentos\\4to CUATRIMESTRE\\DesarrolloAplicacionesll\\GitHub(TiendaDeAbarrotes)\\VentaDeAbarrotes\\TiendaDeAbarrotes\\src\\Imagenes\\tostadas.jpg"));
+        ("src\\Imagenes\\tostadas.jpg"));
                 break;
             case 4:
                  txtPrecio.setText("15");
                 this.lblImagen.setIcon(new ImageIcon
-        ("C:\\Users\\karlo\\OneDrive\\Documentos\\4to CUATRIMESTRE\\DesarrolloAplicacionesll\\GitHub(TiendaDeAbarrotes)\\VentaDeAbarrotes\\TiendaDeAbarrotes\\src\\Imagenes\\cremaPeq.jpg"));
+        ("src\\Imagenes\\cremaPeq.jpg"));
                 break;
             case 5:
                  txtPrecio.setText("21");
                 this.lblImagen.setIcon(new ImageIcon
-        ("C:\\Users\\karlo\\OneDrive\\Documentos\\4to CUATRIMESTRE\\DesarrolloAplicacionesll\\GitHub(TiendaDeAbarrotes)\\VentaDeAbarrotes\\TiendaDeAbarrotes\\src\\Imagenes\\lechelitro.jpg"));
+        ("src\\Imagenes\\lechelitro.jpg"));
                 break;
         }
         
