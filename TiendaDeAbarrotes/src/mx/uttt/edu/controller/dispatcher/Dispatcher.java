@@ -14,31 +14,28 @@ import mx.uttt.edu.front.controller.view.VentaView;
  * @author karlo
  */
 public class Dispatcher {
-    
-    
-   private ProductosView produt;
-   private VentaView venta;
-    public Dispatcher()
-    {
+
+    private ProductosView produt;
+    private VentaView venta;
+
+    public Dispatcher() {
         produt = new ProductosView();
         venta = new VentaView();
     }
-    
-    public void dispatch(String request)
-    {
-        if (request.equalsIgnoreCase("Producto")) {
-            produt.show();
-        }else if(request.equalsIgnoreCase(""))
-        {
-          venta.show();
-        }else 
-        {
-            JOptionPane.showMessageDialog(null,"Error","Error",0);
+
+    public void dispatch(String request) {
+        try {
+            if (request.equalsIgnoreCase("Producto")) {
+
+                produt.show();
+            } else if (request.equalsIgnoreCase("venta"));
+            {
+                venta.show();
+            }
+            
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "La opcion escogida no existe ", "Error", 0);
         }
- 
     }
-    
-    
-    
-    
+
 }

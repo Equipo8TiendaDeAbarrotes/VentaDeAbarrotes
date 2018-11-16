@@ -5,6 +5,8 @@
  */
 package Ejecutor;
 
+import mx.uttt.edu.front.controller.front.FrontController;
+
 /**
  *
  * @author moy-c
@@ -14,6 +16,7 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
     /**
      * Creates new form FrontControllerDemoMenu
      */
+    FrontController frontController = new FrontController();
     public FrontControllerDemoMenu() {
         initComponents();
     }
@@ -30,8 +33,6 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        btnAgregarProducto = new javax.swing.JButton();
-        btnEliminarProducto = new javax.swing.JButton();
         btnMostrarProducto = new javax.swing.JButton();
         btnVenta = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -65,23 +66,16 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 255));
 
-        btnAgregarProducto.setBackground(new java.awt.Color(255, 102, 0));
-        btnAgregarProducto.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
-        btnAgregarProducto.setText("Agregar Producto");
-        btnAgregarProducto.setAutoscrolls(true);
-        btnAgregarProducto.setDefaultCapable(false);
-
-        btnEliminarProducto.setBackground(new java.awt.Color(255, 102, 0));
-        btnEliminarProducto.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
-        btnEliminarProducto.setText("Eliminar Producto");
-        btnEliminarProducto.setBorderPainted(false);
-        btnEliminarProducto.setDefaultCapable(false);
-
         btnMostrarProducto.setBackground(new java.awt.Color(255, 102, 0));
         btnMostrarProducto.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
         btnMostrarProducto.setText("Mostrar Producto");
         btnMostrarProducto.setBorderPainted(false);
         btnMostrarProducto.setDefaultCapable(false);
+        btnMostrarProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarProductoActionPerformed(evt);
+            }
+        });
 
         btnVenta.setBackground(new java.awt.Color(255, 102, 0));
         btnVenta.setFont(new java.awt.Font("Times New Roman", 2, 14)); // NOI18N
@@ -100,35 +94,28 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnMostrarProducto)
-                    .addComponent(btnEliminarProducto)
-                    .addComponent(btnAgregarProducto))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnVenta)
-                .addGap(32, 32, 32))
-            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(119, 119, 119))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(btnMostrarProducto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVenta)
+                .addGap(32, 32, 32))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(btnAgregarProducto)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminarProducto)
-                    .addComponent(btnVenta))
-                .addGap(18, 18, 18)
-                .addComponent(btnMostrarProducto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(btnVenta)
+                    .addComponent(btnMostrarProducto))
+                .addGap(49, 49, 49)
                 .addComponent(jButton1)
                 .addGap(10, 10, 10))
         );
@@ -150,6 +137,10 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMostrarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarProductoActionPerformed
+    frontController.dispatchRequest("Producto");
+    }//GEN-LAST:event_btnMostrarProductoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,8 +179,6 @@ public class FrontControllerDemoMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarProducto;
-    private javax.swing.JButton btnEliminarProducto;
     private javax.swing.JButton btnMostrarProducto;
     private javax.swing.JButton btnVenta;
     private javax.swing.JButton jButton1;
