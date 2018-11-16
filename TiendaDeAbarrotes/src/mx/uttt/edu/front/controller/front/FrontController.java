@@ -20,14 +20,7 @@ public class FrontController {
       dispatcher = new Dispatcher();
       
    }
-        
-  private boolean isAuthenticProduc(){
-        JOptionPane.showMessageDialog(null,"Producto Registrado Correctamente");
-      
-      return true;
-      
-   }
-  
+       
   private boolean isAuthenticVenta(){
         JOptionPane.showMessageDialog(null,"Venta  Finalizada Correctamente");
       
@@ -45,11 +38,10 @@ public class FrontController {
       
       trackRequest(request);
    
-      if(isAuthenticProduc()){
+      if(isAuthenticVenta()){
          dispatcher.dispatch(request);
          
-      }else if (isAuthenticVenta()){
-           dispatcher.dispatch(request);
+     
       }	
    }
    
