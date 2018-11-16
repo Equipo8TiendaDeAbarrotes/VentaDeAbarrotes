@@ -14,7 +14,7 @@ import mx.uttt.edu.controller.dispatcher.Dispatcher;
  */
 public class FrontController {
     
-      private final Dispatcher dispatcher;
+      private  Dispatcher dispatcher;
       
         public FrontController(){
       dispatcher = new Dispatcher();
@@ -38,13 +38,13 @@ public class FrontController {
       
       trackRequest(request);
    
-      if(isAuthenticVenta()){
+      
          dispatcher.dispatch(request);
          
      
       }	
    }
    
-}
+
       
 
